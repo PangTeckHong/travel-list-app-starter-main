@@ -19,12 +19,11 @@ function App() {
     setItems((prevItems) => prevItems.map((item) => item.id === id ? {...item, packed: !item.packed} : item));
   }
   
-  
   return (
     <div className="app">
       <Logo />
-      <Form onAddItem={handleAddItem} />
-      <PackingList items={items} onDeleteItem={handleDeleteItem} onUpdateItem={handleUpdateItem}/>
+      <Form onAddItem={handleAddItem}/>
+      <PackingList items={items} onDeleteItem={handleDeleteItem} onUpdateItem={handleUpdateItem} />
       <Stats items={items} />
     </div>
   );
